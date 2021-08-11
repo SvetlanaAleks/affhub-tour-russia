@@ -1,0 +1,244 @@
+.gallery
+	padding-bottom: 100px
+	background: url('../img/svg/bg_gallery_1.svg') no-repeat, url('../img/svg/bg_gallery_2.svg') no-repeat, url('../img/svg/bg_gallery_3.svg') no-repeat, url('../img/svg/bg_gallery_4.svg') no-repeat
+	background-position: calc(50% - 8px) 20px,calc(50% - -940px) 288px, calc(49% - -988px) 1124px,calc(50% - -439px) 1231px
+	+r(1249)
+		padding-bottom: 70px
+		background-position: calc(50% - -32px) 20px,calc(50% - -940px) 288px,calc(49% - -988px) 1124px,calc(50% - -389px) 1081px
+		background-size: 1000px,auto,auto,410px
+	+r(1023)
+		background-position: calc(50% - -32px) 230px,calc(50% - -940px) 288px,calc(49% - -428px) 1744px,calc(50% - -329px) 1291px
+		background-size: 950px,auto,490px,300px
+	+r(767)
+		padding-bottom: 30px
+		background-position: calc(50% - -12px) 200px,calc(50% - -940px) 288px,calc(49% - -318px) 1504px,calc(50% - -279px) 1131px
+		background-size: 830px,auto,390px,260px
+	+r(639)
+		background: none
+		padding-bottom: 0
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		+r(1023)
+			justify-content: space-between
+		+r(639)
+			height: 610px
+			overflow: hidden
+			position: relative
+			margin-bottom: 30px
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 200px
+				background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+				z-index: 1
+			&.active
+				height: auto
+				overflow: visible
+				&::before
+					opacity: 0
+					pointer-events: none
+		+r(479)
+			height: 530px
+	&__title
+		font-weight: bold
+		font-size: 51px
+		line-height: 56px
+		letter-spacing: 0.05em
+		max-width: 565px
+		width: 100%
+		margin-right: 30px
+		+r(1249)
+			font-size: 48px
+			line-height: 110%
+		+r(1023)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 40px
+		+r(767)
+			max-width: 515px
+			font-size: 42px
+		+r(639)
+			font-size: 35px
+			margin-bottom: 30px
+		+r(479)
+			font-size: 24px
+	&__btn
+		display: none
+		+r(639)
+			max-width: 280px
+			width: 100%
+			margin: auto
+			display: flex
+			align-items: center
+			justify-content: center
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 14px
+			line-height: 17px
+			background: none
+			cursor: pointer
+			padding: 12px
+			border: 1px solid #D1D1D1
+			.fico
+				font-size: 8px
+				margin-left: 10px
+				transition: all .3s
+			&.active
+				.fico
+					transform: rotate(180deg)
+
+.gallery-item
+	max-width: 367px
+	width: 100%
+	&--1
+		margin-bottom: 30px
+	&--2
+		margin-top: 120px
+		margin-right: 30px
+		margin-bottom: 30px
+	&--3
+		margin-right: 30px
+	&--5
+		margin-left: 197px
+		margin-right: 30px
+		margin-bottom: 30px
+	&--6
+		margin-top: -125px
+	&--7
+		margin-right: 30px
+		margin-bottom: 30px
+	&--8
+		margin-right: 30px
+	&--9
+		margin-top: -120px
+	&--10
+		margin-left: 160px
+		margin-right: 130px
+	+r(1249)
+		max-width: 312px
+		&--10
+			margin-left: 140px
+			margin-right: 110px
+	+r(1023)
+		max-width: 48%
+		&--2
+			margin-right: 0
+			margin-top: 0
+		&--5
+			margin-left: 0
+		&--6
+			margin-top: 0
+		&--8
+			margin-right: 0
+		&--9
+			margin-top: 0
+		&--10
+			margin-left: 0
+			margin-right: 0
+		&:nth-of-type(odd)
+			margin-right: 25px
+		+nlt
+			margin-bottom: 30px
+	+r(767)
+		&:nth-of-type(odd)
+			margin-right: 20px
+		+nlt
+			margin-bottom: 25px
+	+r(639)
+		max-width: 100%
+		position: relative
+		text-align: center
+		&:nth-of-type(odd)
+			margin-right: 0
+		+nlt
+			margin-bottom: 20px
+	+r(479)
+		+nlt
+			margin-bottom: 6px
+	&__photo-wrap
+		margin-bottom: 20px
+		position: relative
+		img
+			max-width: 100%
+		+r(1249)
+			margin-bottom: 15px
+		+r(767)
+			margin-bottom: 10px
+		+r(639)
+			img
+				+object-fit(cover)
+				height: 110px
+				width: 100%
+		+r(479)
+			margin-bottom: 3px
+			img
+				height: 80px
+	&__city
+		font-weight: bold
+		font-size: 32px
+		line-height: 120%
+		margin-bottom: 6px
+		+r(1249)
+			font-size: 28px
+		+r(1023)
+			font-size: 26px
+		+r(767)
+			font-size: 24px
+		+r(639)
+			position: absolute
+			top: 40px
+			left: 20px
+		+r(479)
+			top: 28px
+			font-size: 22px
+	&__link
+		color: #9F72FF
+		font-weight: 500
+		font-size: 18px
+		line-height: 22px
+		+r(1023)
+			font-size: 16px
+		+r(479)
+			font-size: 12px
+	&__btn
+		margin-top: 20px
+		+r(1023)
+			margin-top: 15px
+	&__label
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		text-transform: uppercase
+		padding: 10px
+		color: white
+		background: rgba(255, 168, 0, 0.5)
+		font-size: 30px
+		line-height: 33px
+		letter-spacing: 0.05em
+		white-space: nowrap
+		+r(1249)
+			font-size: 28px
+		+r(1023)
+			font-size: 26px
+		+r(767)
+			font-size: 22px
+			padding: 8px
+		+r(639)
+			font-size: 18px
+			line-height: 1
+			padding: 6px
+			transform: none
+			top: 10px
+			right: 10px
+			left: auto
+		+r(479)
+			top: 5px
+			right: 5px
+			padding: 3px
+			font-size: 12px

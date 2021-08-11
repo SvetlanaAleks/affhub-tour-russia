@@ -1,0 +1,298 @@
+.popup
+	overflow-x: hidden
+	overflow-y: auto
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	position: fixed
+	z-index: 120
+	display: none
+	&.active
+		display: flex
+	&__close
+		display: none
+		position: absolute
+		top: 40px
+		right: 20px
+		width: 24px
+		cursor: pointer
+		z-index: 1
+		+r(1023)
+			display: block
+
+	&__wrap
+		position: relative
+		margin: auto
+		padding: 20px 0
+		max-width: 1065px
+		width: 100%
+		+r(1249)
+			max-width: 930px
+		+r(1023)
+			max-width: 610px
+		+r(767)
+			max-width: 450px
+		+r(480)
+			max-width: 300px
+	&__content
+		position: relative
+		padding: 30px
+		background: #E5E5E5
+		+r(480)
+			padding: 30px 10px
+	&__title
+		font-weight: bold
+		font-size: 48px
+		line-height: 53px
+		margin-bottom: 30px
+		text-align: center
+		+r(1023)
+			font-size: 40px
+			line-height: 100%
+		+r(767)
+			font-size: 36px
+		+r(480)
+			font-size: 30px
+			text-align: left
+			margin-bottom: 30px
+	&__success
+		display: none
+		text-align: center
+	&__success-title
+		font-weight: bold
+		font-size: 48px
+		line-height: 53px
+		margin-bottom: 30px
+		+r(1023)
+			font-size: 40px
+			line-height: 100%
+		+r(767)
+			font-size: 36px
+		+r(480)
+			font-size: 30px
+			margin-bottom: 20px
+	.form_error
+		font-size: 14px
+		line-height: 17px
+		color: #ED534B
+		margin-top: 20px
+
+.form
+	display: flex
+	+r(1023)
+		display: block
+	&__left
+		width: 545px
+		margin-right: 30px
+		background: #FFFFFF
+		padding: 30px
+		+r(1249)
+			width: 475px
+		+r(1023)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 30px
+		+r(767)
+			padding: 20px
+		+r(480)
+			padding: 15px
+			margin-bottom: 0
+	&__wrap-input
+		&.error
+			position: relative
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				width: 24px
+				height: 24px
+				border-radius: 50%
+				background: #ED534B url('../img/svg/minus.svg') no-repeat center
+				box-shadow: 0px 4px 18px rgba(237, 83, 75, 0.37)
+				top: 55px
+				right: 15px
+			.form__input
+				border: 1px solid #ED534B
+		+nlt
+			margin-bottom: 30px
+		+r(1023)
+			+nlt
+				margin-bottom: 20px
+	&__label
+		font-weight: bold
+		font-size: 18px
+		line-height: 22px
+		margin-bottom: 20px
+		+r(1023)
+			margin-bottom: 10px
+	&__input
+		max-width: 100%
+		width: 100%
+		box-sizing: border-box
+		border: 1px solid #000000
+		background: none
+		height: 52px
+		padding: 0 15px
+		font-size: 18px
+		line-height: 22px
+		font-family: 'Montserrat', Arial, Helvetica, sans-serif
+		+r(1023)
+			height: 45px
+		+r(480)
+			font-size: 14px
+	&__right
+		width: 430px
+		display: flex
+		flex-direction: column
+		+r(1249)
+			width: 360px
+		+r(1023)
+			width: 100%
+	&__select
+		width: 485px
+		+r(1249)
+			width: 415px
+		+r(1023)
+			width: 490px
+		+r(767)
+			width: 350px
+		+r(480)
+			width: 250px
+	&__select-desc
+		color: #BFBFBF
+	&__checkbox
+		background: #FFFFFF
+		padding: 30px
+		+r(1023)
+			margin-bottom: 30px
+		+r(767)
+			padding: 20px
+	&__checkbox-text
+		font-weight: bold
+		font-size: 18px
+		line-height: 22px
+		margin-bottom: 40px
+		+r(1023)
+			margin-bottom: 20px
+	&__btns
+		margin-top: auto
+	&__btn
+		color: #000000
+		font-weight: normal
+		text-transform: capitalize
+		&--grey
+			background: #CFCFCF
+		+nlt
+			margin-bottom: 30px
+		+r(767)
+			+nlt
+				margin-bottom: 20px
+
+
+.select2-container
+	&--default
+		.select2-selection--single
+			border-radius: 0
+			padding: 0
+			border: 1px solid #000000
+			.select2-selection__arrow 
+				top: 11px
+				right: 5px
+				b
+					border: none
+					background: url(../img/svg/arrowS.svg) no-repeat center
+					width: 10px
+					height: 7px
+	.select2-selection--single
+		height: 52px
+		padding: 14px 15px
+		+r(1023)
+			height: 45px
+			padding: 11px 15px
+		.select2-selection__rendered
+			padding-left: 0
+			padding-right: 0
+			font-size: 18px
+			line-height: 22px
+			+r(480)
+				font-size: 14px
+	&--open .select2-dropdown--below
+		background: #fff
+		border: 1px solid #000000
+		border-top: none
+		overflow: hidden
+		margin-top: -1px
+
+.select2-results__option
+	padding: 15px
+	font-size: 18px
+	line-height: 22px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	+r(480)
+		font-size: 14px
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+	background: transparentize(#DEDEDE, .7)
+	color: #000
+
+// Стили для чекбокса в формах
+.checkbox
+	display: flex
+	align-items: flex-start
+	position: relative
+	padding-left: 37px
+	font-size: 18px
+	line-height: 22px
+	user-select: none
+	+r(480)
+		font-size: 12px
+	&__input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+		height: 0
+		width: 0
+		&:checked 
+			~ .checkbox__checkmark
+				.checkbox__ico
+					opacity: 1
+	&__checkmark
+		position: absolute
+		top: 3px
+		left: 0
+		height: 17px
+		width: 17px
+		background-color: white
+		border: 1px solid #000
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: all .3s
+	&__label
+		cursor: pointer
+	&__ico
+		opacity: 0
+		width: 10px
+		transition: all .3s
+		color: #000
+
+
+//overlay
+.overlay
+	opacity: 0
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	z-index: 9
+	background: rgba(255, 255, 255, 0.97)
+	transition: all .5s
+	pointer-events: none
+	&.active
+		opacity: 1
+		pointer-events: visible

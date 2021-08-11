@@ -1,0 +1,83 @@
+.timing
+	padding-top: 118px
+	padding-bottom: 170px
+	background: url('../img/svg/bg_timing_1.svg') no-repeat, url('../img/svg/bg_timing_2.svg') no-repeat
+	background-position: calc(50% - -456px) 16px, calc(50% - 586px) 305px
+	+r(1249)
+		padding-top: 100px
+		background-position: calc(50% - -406px) 46px,calc(50% - 416px) 305px
+		background-size: 680px, 440px
+	+r(1023)
+		padding-top: 90px
+		padding-bottom: 110px
+		background-position: calc(50% - -526px) 16px,calc(50% - 306px) 285px
+		background-size: 700px,350px
+	+r(767)
+		padding-top: 30px
+		padding-bottom: 80px
+		background-position: calc(50% - -536px) 6px,calc(50% - 236px) 195px
+		background-size: 580px,340px
+	+r(639)
+		background-position: calc(50% - -476px) -4px,calc(50% - 166px) 376px
+		background-size: 580px,340px
+	+r(479)
+		padding-bottom: 30px
+		background-position: calc(50% - -346px) 6px,calc(50% - 126px) 386px
+		background-size: 440px,230px
+	&__title
+		margin-bottom: 60px
+		letter-spacing: 0.05em
+		+r(1249)
+			margin-bottom: 50px
+		+r(1023)
+			margin-bottom: 40px
+		+r(767)
+			margin-bottom: 30px
+
+
+.timing-item
+	display: flex
+	align-items: center
+	height: 47px
+	font-weight: 500
+	font-size: 18px
+	line-height: 150%
+	+nlt
+		margin-bottom: 10px
+	+r(1023)
+		font-size: 16px
+		height: 44px
+	+r(767)
+		font-size: 14px
+		height: 40px
+	+r(639)
+		height: auto
+		display: block
+	+r(479)
+		font-size: 12px
+	&__time
+		background: #000000
+		max-width: 384px
+		width: 100%
+		text-align: center
+		color: white
+		margin-right: 10px
+		height: 100%
+		padding: 10px
+		+r(1249)
+			max-width: 355px
+		+r(1023)
+			max-width: 205px
+		+r(767)
+			max-width: 165px
+		+r(639)
+			max-width: 100%
+			text-align: left
+	&__text
+		flex: 1
+		background: #EEEEEE
+		height: 100%
+		padding: 10px
+		text-align: center
+		+r(639)
+			text-align: left

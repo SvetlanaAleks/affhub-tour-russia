@@ -1,0 +1,43 @@
+.popup.js-popup#order-popup
+	.popup__wrap
+		.popup__close.js-close
+			img(src="img/svg/close.svg", alt="close")
+		.popup__content
+			h2.popup__title.title Регистрация
+			.popup__success
+				h2.popup__success-title.title Спасибо!
+				p.popup__success-desc В ближайшее время с тобой свяжется наш менеджер и расскажет детали мероприятия. Чтобы быть в курсе всех событий и новостей подписывайся на наш канал в телеграм!
+			form.popup__form.form#registration_form(action="/" method="post")
+				input.js-input-location(type="hidden" name="location")
+				.form__left
+					.form__wrap-input
+						p.form__label Имя
+						input.form__input.js-input(type="text", name="name" required)
+					.form__wrap-input
+						p.form__label Электронная почта
+						input.form__input.js-input(type="email", name="email" required)
+					.form__wrap-input
+						p.form__label Ник в телеграм
+						input.form__input.js-input(type="text", name="nickname" required)
+					.form__wrap-input
+						p.form__label Выберите город
+						select.form__select.js-select(name="city")
+							option(value='Воронеж' selected data-desc='8 октября' ) Воронеж
+							option(value='Казань' data-desc='17 сентября') Казань
+							option(value='Екатеринбург' data-desc='24 сентября') Екатеринбург
+							option(value='Самара' data-desc='19 октября') Самара
+							option(value='Волгоград' data-desc='15 октября') Волгоград
+							option(value='Саратов' data-desc='12 октября') Саратов
+							option(value='Краснодар' data-desc='14 сентября') Краснодар
+							option(value='Уфа' data-desc='21 сентября') Уфа
+				.form__right
+					.form__checkbox
+						p.form__checkbox-text Получать email-уведомления
+						.checkbox
+							label.checkbox__label Публикации моих статей, их оценки, комментарии, ответы, выбор редакции, добавление в закладки, нововведения, бан/разбан.
+								input.checkbox__input(type="checkbox")
+								span.checkbox__checkmark
+									img.checkbox__ico(src="img/svg/check-order.svg", alt="check")
+					.form__btns
+						button.form__btn.btn(type="submit") Отправить
+						button.form__btn.form__btn--grey.btn.js-close(type="submit") Отмена

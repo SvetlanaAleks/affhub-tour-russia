@@ -1,0 +1,125 @@
+.speakers
+	padding: 50px 0
+	+r(767)
+		padding: 40px 0
+	+r(479)
+		padding-bottom: 0
+		padding-top: 36px
+	&__list
+		display: flex
+		align-items: flex-start
+		margin-left: -22px
+		+r(1249)
+			margin-left: 0
+		+r(767)
+			margin-left: 0
+			justify-content: center
+
+
+.speaker
+	display: flex
+	align-items: flex-start
+	&--1
+		max-width: 596px
+		width: 100%
+		.speaker__photo
+			margin-right: 5px
+	&--2
+		margin-top: -4px
+		.speaker__photo
+			margin-right: 20px
+	+r(1249)
+		&--1
+			max-width: 555px
+	+r(1023)
+		max-width: 375px
+		&--1
+			.speaker__photo
+				max-width: 120px
+				margin-right: 15px
+		&--2
+			.speaker__photo
+				max-width: 105px
+				margin-right: 15px
+	+r(767)
+		display: block
+		text-align: center
+		&--1, &--2
+			max-width: 100%
+			width: 45%
+			.speaker__photo
+				margin-right: 0
+				margin-bottom: 19px
+		&--1
+			.speaker__photo
+				margin-bottom: 7px
+	+r(639)
+		&--1, &--2
+			width: 50%
+		&--1
+			.speaker__photo
+				margin-bottom: 8px
+	+r(479)
+		&--1
+			.speaker__photo
+				margin-bottom: 10px
+				max-width: 90px
+		&--2
+			.speaker__photo
+				max-width: 82px
+				margin-bottom: 17px
+	&__name
+		font-weight: bold
+		font-size: 36px
+		line-height: 36px
+		margin-bottom: 20px
+		+r(1249)
+			font-size: 34px
+			line-height: 34px
+			margin-bottom: 15px
+		+r(1023)
+			font-size: 26px
+			line-height: 30px
+			margin-bottom: 10px
+		+r(639)
+			font-size: 26px
+			line-height: 110%
+		+r(479)
+			font-size: 18px
+			line-height: 20px
+			letter-spacing: 0.05em
+	&__company
+		font-weight: 500
+		font-size: 18px
+		line-height: 150%
+		margin-bottom: 20px
+		+r(1249)
+			margin-bottom: 15px
+		+r(1023)
+			font-size: 16px
+			line-height: 130%
+			margin-bottom: 10px
+		+r(479)
+			font-size: 12px
+	&__title
+		background: rgba(159, 114, 255, 0.5)
+		font-weight: 500
+		font-size: 14px
+		line-height: 150%
+		padding: 6px
+		margin-bottom: 10px
+		display: inline-block
+		+r(1023)
+			font-size: 12px
+			padding: 5px
+		+r(479)
+			margin-bottom: 14px
+	&__topic
+		font-weight: 500
+		font-size: 18px
+		line-height: 150%
+		+r(1023)
+			font-size: 16px
+			line-height: 130%
+		+r(479)
+			font-size: 12px

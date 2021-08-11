@@ -1,0 +1,125 @@
+.organizers
+	padding-bottom: 170px
+	padding-top: 59px
+	+r(1249)
+		padding: 70px 0
+	+r(639)
+		padding: 60px 0
+	+r(479)
+		padding-bottom: 30px
+		padding-top: 29px
+	&__title
+		font-weight: bold
+		font-size: 64px
+		line-height: 71px
+		letter-spacing: 0.05em
+		margin-bottom: 60px
+		.bg-world
+			margin-left: 33px
+			padding: 10px
+			display: inline-block
+			background: rgba(255, 168, 0, 0.5)
+			span
+				letter-spacing: normal
+		+r(1249)
+			font-size: 60px
+			line-height: 120%
+			margin-bottom: 50px
+		+r(1023)
+			font-size: 52px
+		+r(767)
+			font-size: 44px
+			margin-bottom: 40px
+		+r(639)
+			font-size: 35px
+			margin-bottom: 30px
+			.bg-world
+				margin-left: 13px
+		+r(479)
+			font-size: 24px
+			.bg-world
+				margin-left: 5px
+				padding: 4px 6px
+	&__list
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		+r(1023)
+			flex-wrap: wrap
+			justify-content: center
+
+.organizer
+	text-align: center
+	+r(1023)
+		max-width: calc(50% - 60px)
+		width: 100%
+		&:nth-of-type(-n+2)
+			margin-bottom: 30px
+	+r(767)
+		max-width: calc(50% - 20px)
+	+r(479)
+		max-width: 100%
+		display: flex
+		align-items: flex-start
+		text-align: left
+		&:nth-of-type(-n+3)
+			margin-bottom: 30px
+	&__photo
+		margin-bottom: 40px
+		+r(1249)
+			width: 160px
+			margin-bottom: 25px
+		+r(1023)
+			margin-bottom: 15px
+		+r(639)
+			width: 150px
+		+r(479)
+			width: 80px
+			margin-bottom: 0
+			margin-right: 16px
+	&__info
+		+r(479)
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+	&__post
+		font-size: 18px
+		line-height: 150%
+		margin-bottom: 10px
+		+r(1249)
+			font-size: 18px
+			line-height: 140%
+			margin-bottom: 6px
+		+r(639)
+			font-size: 16px
+		+r(479)
+			font-size: 14px
+			margin-bottom: 3px
+	&__name
+		font-weight: bold
+		font-size: 30px
+		line-height: 100%
+		margin-bottom: 10px
+		+r(1249)
+			font-size: 28px
+		+r(639)
+			font-size: 22px
+		+r(479)
+			font-size: 20px
+			order: -1
+	&__link
+		background: #FFB5E6
+		text-align: center
+		padding: 4px 20px
+		font-weight: 500
+		font-size: 16px
+		line-height: 160%
+		color: #000
+		text-decoration: none
+		display: inline-block
+		+r(639)
+			font-size: 14px
+			padding: 4px 15px
+		+r(479)
+			font-size: 12px
+			padding: 3px 10px

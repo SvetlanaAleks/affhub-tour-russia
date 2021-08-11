@@ -1,0 +1,76 @@
+body
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif
+	font-size: 20px
+
+// Font icons
+.fico
+	display: inline-block
+	font-size: 3rem
+	&::before
+		display: block
+
+
+.title
+	font-family: "Acworth", Arial, Helvetica, sans-serif
+	&--med
+		font-weight: 700
+		font-size: 54px
+		line-height: 60px
+	+r(1249)
+		&--med
+			font-size: 50px
+	+r(1023)
+		&--med
+			font-size: 48px
+			line-height: 56px
+	+r(767)
+		&--med
+			font-size: 44px
+			line-height: 48px
+	+r(639)
+		&--med
+			font-size: 35px
+			line-height: 110%
+	+r(479)
+		&--med
+			font-size: 24px
+
+.container
+	width: 1170px
+	margin: 0 auto
+	position: relative
+	z-index: 1
+	+r(1249)
+		 width: 1000px
+	+r(1023)
+		padding: 0 35px
+		width: 760px
+	+r(767)
+		width: 640px
+		padding: 0 30px
+	+r(639)
+		width: 480px
+		padding: 0 20px
+	+r(479)
+		width: 320px
+
+.slick-slide
+	outline: none
+
+.btn
+	cursor: pointer
+	display: block
+	background: #9F72FF
+	text-align: center
+	text-transform: uppercase
+	color: white
+	font-size: 18px
+	line-height: 22px
+	font-weight: 700
+	border: none
+	width: 100%
+	padding: 15px
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif
+	+r(767)
+		font-size: 16px
+		padding: 10px

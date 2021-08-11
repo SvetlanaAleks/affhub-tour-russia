@@ -1,0 +1,266 @@
+.header
+	padding-top: 288px
+	padding-bottom: 250px
+	background: url('../img/svg/bg_header.svg') no-repeat calc(50% - 213px) 108px
+	position: relative
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		right: calc(50% - 518px)
+		top: 140px
+		width: 134px
+		height: 134px
+		background: url('../img/svg/bg_header_star.svg') no-repeat
+		background-size: 100%
+	+r(1489)
+		background-position: calc(50% - 73px) 158px
+	+r(1249)
+		background-position: calc(50% - 33px) 158px
+		background-size: 890px
+		padding-top: 260px
+		padding-bottom: 230px
+		&::after
+			right: calc(50% - 468px)
+			top: 100px
+	+r(1023)
+		background-position: calc(50% - 3px) 108px
+		background-size: 980px
+		padding-bottom: 150px
+		&::after
+			right: calc(50% - 328px)
+			top: 110px
+			background-size: 80%
+	+r(767)
+		background-position: calc(50% - 133px) 68px
+		background-size: 980px
+	+r(639)
+		padding-top: 120px
+		padding-bottom: 30px
+		background-position: calc(50% - 133px) 58px
+		background-size: 850px
+		overflow-x: hidden
+		&::after
+			display: none
+			background: none
+	+r(479)
+		padding-top: 83px
+		padding-bottom: 0
+		background-position: calc(50% - 134px) 11px
+		background-size: 470px
+
+	&__title
+		font-weight: 700
+		font-size: 137.16px
+		line-height: 118px
+		+r(1249)
+			font-size: 115px
+			line-height: 100px
+		+r(1023)
+			font-size: 95px
+			line-height: 80px
+			margin-bottom: 20px
+		+r(767)
+			font-size: 85px
+			line-height: 70px
+		+r(639)
+			font-size: 75px
+			line-height: 65px
+		+r(479)
+			font-size: 53px
+			line-height: 46px
+			margin-bottom: 8px
+	&__subtitle
+		font-weight: 700
+		font-size: 42px
+		line-height: 46px
+		background: rgba(255, 87, 198, 0.5)
+		padding: 0 30px
+		max-width: 709px
+		width: 100%
+		position: absolute
+		right: 0
+		top: 134px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			transform: translateX(-100%)
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 23px 23px 0
+			border-color: transparent rgba(255, 87, 198, 0.5) transparent transparent
+		+r(1249)
+			font-size: 36px
+			line-height: 40px
+			max-width: 620px
+			top: 115px
+		+r(1023)
+			position: relative
+			top: auto
+			padding: 20px 30px
+			font-size: 32px
+			line-height: 34px
+			&::after
+				top: -23px
+				transform: rotate(-180deg)
+		+r(767)
+			padding: 10px 20px
+			font-size: 28px
+			line-height: 30px
+		+r(639)
+			margin-bottom: 20px
+			font-size: 24px
+			line-height: 24px
+		+r(479)
+			font-size: 18px
+			line-height: 20px
+			width: 320px
+			margin: 0 -20px
+			padding: 5px 20px
+			margin-bottom: 20px
+			&::after
+				border-width: 0 15px 15px 0
+				top: -15px
+
+
+	.reg-block
+		display: none
+		+r(639)
+			display: flex
+			flex-direction: column-reverse
+	&__list-events
+		+r(639)
+			display: flex
+			flex-wrap: nowrap
+			// margin: 0 -150px
+			margin-bottom: 20px
+			animation: animate 24s infinite linear
+
+
+
+@keyframes animate
+	0%
+		transform: translateX(0)
+	50%
+		transform: translateX(-280%)
+	75%
+		transform: translateX(-140%)
+	100%
+		transform: translateX(0)
+
+
+
+.header__info-event
+	display: inline-block
+	color: rgba(0, 0, 0, 0.7)
+	font-size: 20px
+	line-height: 120%
+	padding: 8px 6.5px
+	background: rgba(255, 255, 255, 0.5)
+	border: 1px solid #000000
+	position: absolute
+	span
+		font-weight: 700
+		display: inline-block
+		margin-left: 6.5px
+		font-size: 18px
+		text-transform: uppercase
+	&--1
+		top: -76px
+		left: 127px
+	&--2
+		top: -76px
+		right: 336px
+	&--3
+		top: 29px
+		right: 69px
+	&--4
+		bottom: -75px
+		left: -180px
+	&--5
+		bottom: -137px
+		left: 20px
+	&--6
+		bottom: -46px
+		left: 217px
+	&--7
+		bottom: -199px
+		left: 325px
+	&--8
+		bottom: -146px
+		right: 307px
+	+r(1599)
+		&--4
+			left: -140px
+	+r(1489)
+		&--4
+			left: -20px
+		&--5
+			left: 90px
+		&--7
+			left: 375px
+		&--8
+			right: 267px
+	+r(1249)
+		&--4
+			left: 20px
+		&--5
+			left: 110px
+			bottom: -157px
+		&--6
+			bottom: -100px
+			left: 367px
+		&--7
+			left: 465px
+		&--8
+			right: 67px
+			bottom: -126px
+	+r(1023)
+		font-size: 18px
+		span
+			font-size: 16px
+		&--1
+			top: -66px
+			left: 17px
+		&--2
+			top: -126px
+			right: 336px
+		&--3
+			top: -51px
+			right: 59px
+		&--4
+			left: 60px
+			bottom: -55px
+		&--5
+			left: 110px
+			bottom: -137px
+		&--6
+			bottom: -110px
+			left: 367px
+		&--7
+			left: 505px
+			bottom: -59px
+		&--8
+			right: 97px
+			bottom: auto
+			top: 100px
+	+r(767)
+		&--5
+			bottom: -127px
+		&--7
+			left: 386px
+			bottom: -55px
+	+r(639)
+		position: static
+		white-space: nowrap
+		+nlt
+			margin-right: 10px
+	+r(479)
+		font-size: 10px
+		padding: 3px 5.5px
+		span
+			font-size: 8px

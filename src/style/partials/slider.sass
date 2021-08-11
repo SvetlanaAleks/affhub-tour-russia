@@ -1,0 +1,151 @@
+.slider
+	padding-bottom: 50px
+	+r(767)
+		padding-bottom: 30px
+	+r(479)
+		padding-bottom: 0
+	.container
+		+r(767)
+			width: 100%
+			padding: 0
+	&__wrapper
+		+r(1249)
+			width: 85%
+			margin: auto
+		+r(767)
+			width: 100%
+	.slick-slide
+		width: 210px
+		margin: 0 15px
+		opacity: 0.2
+		&.slick-center
+			opacity: 1
+			.slide
+				&__wrap-photo
+					border: 5px solid #000000
+				&__time
+					border: 1px solid #000000
+					border-radius: 44px
+		+r(1489)
+			width: 195px
+		+r(1249)
+			width: 235px
+		+r(1023)
+			width: 180px
+		+r(767)
+			width: 170px
+		+r(639)
+			width: 150px
+		+r(479)
+			width: 150px
+			margin: 0 5px
+	.slick-arrow
+		position: absolute
+		width: 84px
+		height: 84px
+		background: #000000
+		display: flex
+		align-items: center
+		justify-content: center
+		top: 59px
+		border: none
+		cursor: pointer
+		outline: 0
+		z-index: 1
+		font-size: 0
+		transition: all .2s
+		overflow: visible
+		padding: 0
+		.fico
+			font-size: 26px
+			outline: 0
+			color: white
+			line-height: 1
+		&.next
+			right: calc(50% - 706px)
+		&.prev
+			right: calc(50% - -624px)
+			transform: scaleX(-1)
+		+r(1489)
+			width: 70px
+			height: 70px
+			&.next
+				right: calc(50% - 617px)
+			&.prev
+				right: calc(50% - -546px)
+		+r(1249)
+			width: 60px
+			height: 60px
+			.fico
+				font-size: 24px
+			&.next
+				right: -70px
+			&.prev
+				right: auto
+				left: -70px
+		+r(767)
+			display: none !important
+
+.slide
+	text-align: center
+	transition: all .5s
+	&__wrap-photo
+		width: 200px
+		height: 200px
+		margin: auto
+		border-radius: 50%
+		overflow: hidden
+		border: 2px solid #000000
+		margin-bottom: 29px
+		img
+			max-width: 100%
+		+r(1489)
+			width: 175px
+			height: 175px
+			margin-bottom: 20px
+		+r(1249)
+			width: 145px
+			height: 145px
+		+r(1023)
+			margin-bottom: 10px
+		+r(639)
+			width: 130px
+			height: 130px
+		+r(479)
+			width: 100px
+			height: 100px
+			margin-bottom: 22px
+	&__city
+		font-weight: 700
+		font-size: 30px
+		line-height: 33px
+		letter-spacing: 0.05em
+		margin-bottom: 10px
+		+r(1489)
+			font-size: 26px
+		+r(1023)
+			font-size: 22px
+		+r(639)
+			font-size: 20px
+		+r(479)
+			font-size: 18px
+			line-height: 110%
+	&__time
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 10px
+		+r(479)
+			padding: 3px 10px
+	&__text
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		+nlt
+			margin-right: 10px
+			padding-right: 10px
+			border-right: 1px solid #000000
+		+r(1023)
+			font-size: 14px
+		+r(639)
+			font-size: 12px
