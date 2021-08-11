@@ -31,7 +31,7 @@ var Submit = (function () {
         } else {
           inputLocation.val("affhub.net/affhubtourrussia");
           $.ajax({
-            url: "https://api.apispreadsheets.com/data/16721/",
+            url: "https://api.apispreadsheets.com/data/16808/",
             type: "POST",
             contentType: false,
             processData: false,
