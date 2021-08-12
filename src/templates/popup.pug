@@ -39,5 +39,7 @@
 								span.checkbox__checkmark
 									img.checkbox__ico(src="img/svg/check-order.svg", alt="check")
 					.form__btns
-						button.form__btn.btn(type="submit") Отправить
+						button.form__btn.btn.js-loader(type="submit")
+							span.form__btn-text Отправить
+							<span class="lds-ring"><span></span><span></span><span></span><span></span></span>
 						button.form__btn.form__btn--grey.btn.js-close(type="submit") Отмена

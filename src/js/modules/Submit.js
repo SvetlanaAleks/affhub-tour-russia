@@ -30,6 +30,7 @@ var Submit = (function () {
           Submit.showErrorFields(errorFields);
         } else {
           inputLocation.val("affhub.net/affhubtourrussia");
+          $(".js-loader").addClass("progress");
           $.ajax({
             url: "https://api.apispreadsheets.com/data/16808/",
             type: "POST",
@@ -37,6 +38,8 @@ var Submit = (function () {
             processData: false,
             data: new FormData(this),
             success: function success() {
+              $(".js-loader").removeClass("progress");
+
               $("#registration_form").hide();
               $(".popup__title").hide();
               $(".popup__success").show();
