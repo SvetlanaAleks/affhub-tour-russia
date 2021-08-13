@@ -26,7 +26,7 @@
 	+r(1023)
 		background-position: calc(50% - 3px) 108px
 		background-size: 980px
-		padding-bottom: 150px
+		padding-bottom: 200px
 		&::after
 			right: calc(50% - 328px)
 			top: 110px
@@ -125,18 +125,26 @@
 			&::after
 				border-width: 0 15px 15px 0
 				top: -15px
-
-
-	.reg-block
-		display: none
+	&__reg-block
+		position: absolute
+		right: 0
+		bottom: -239px
+		+r(1023)
+			bottom: -220px
+			right: auto
+			left: 50%
+			transform: translateX(-50%)
+		+r(767)
+			bottom: -200px
 		+r(639)
 			display: flex
 			flex-direction: column-reverse
+			position: static
+			transform: none
 	&__list-events
 		+r(639)
 			display: flex
 			flex-wrap: nowrap
-			// margin: 0 -150px
 			margin-bottom: 20px
 			animation: animate 24s infinite linear
 
@@ -183,16 +191,16 @@
 		left: -180px
 	&--5
 		bottom: -137px
-		left: 20px
+		left: 58px
 	&--6
 		bottom: -46px
 		left: 217px
 	&--7
-		bottom: -199px
+		bottom: -163px
 		left: 325px
 	&--8
-		bottom: -146px
-		right: 307px
+		bottom: -111px
+		right: 237px
 	+r(1599)
 		&--4
 			left: -140px
@@ -264,3 +272,82 @@
 		padding: 3px 5.5px
 		span
 			font-size: 8px
+
+
+
+.reg-block
+	display: flex
+	align-items: center
+	height: 52px
+	+r(767)
+		height: 45px
+	+r(639)
+		height: auto
+		max-width: 280px
+		width: 100%
+		margin: auto
+	&__info
+		padding: 0 14px
+		display: flex
+		align-items: center
+		width: 280px
+		flex-shrink: 0
+		height: 100%
+		background: #F3F3F3
+		+r(1023)
+			width: 250px
+		+r(639)
+			padding: 14px 15px
+			width: 100%
+	&__icon
+		background: #ED534B
+		width: 26px
+		height: 26px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: white
+		font-weight: 500
+		font-size: 18px
+		flex-shrink: 0
+		margin-right: 20px
+		+r(1023)
+			margin-right: 13px
+			width: 22px
+			height: 22px
+		+r(639)
+			margin-right: 20px
+			width: 26px
+			height: 26px
+	&__text
+		color: #161032
+		font-weight: 500
+		font-size: 12px
+		line-height: 150%
+	&__button
+		cursor: pointer
+		display: block
+		background: #9F72FF
+		text-align: center
+		text-transform: uppercase
+		color: white
+		font-size: 20px
+		line-height: 22px
+		font-weight: 700
+		border: none
+		width: 260px
+		padding: 5px
+		height: 100%
+		font-family: 'Montserrat', Arial, Helvetica, sans-serif
+		transition: all .3s
+		&:hover
+			background: darken(#9F72FF, 10%)
+		+r(1023)
+			width: 205px
+			font-size: 16px
+		+r(767)
+			width: 155px
+			font-size: 14px
+		+r(639)
+			width: 100%
+			padding: 10px
